@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 
 void main() {
@@ -41,7 +42,14 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Badges Demo'),
+            badges.Badge(
+              badgeContent: Text('5'),
+              child: Icon(
+                Icons.shopping_bag,
+                color: Colors.indigo,
+                size: 50.0,
+              ),
+            ),
           ],
         ),
       ),
