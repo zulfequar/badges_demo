@@ -30,6 +30,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool showBadge = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,9 +44,10 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const badges.Badge(
-              badgeContent: Text('5'),
-              child: Icon(
+            badges.Badge(
+              showBadge: showBadge,
+              badgeContent: const Text('5'),
+              child: const Icon(
                 Icons.shopping_cart,
                 color: Colors.indigo,
                 size: 50.0,
@@ -56,6 +59,7 @@ class _HomePageState extends State<HomePage> {
               runSpacing: 10,
               children: [
                 badges.Badge(
+                  showBadge: showBadge,
                   badgeContent: const Text('5'),
                   position: badges.BadgePosition.topEnd(top: -2, end: -2),
                   badgeAnimation: const badges.BadgeAnimation.rotation(
@@ -80,6 +84,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 badges.Badge(
+                  showBadge: showBadge,
                   badgeContent: const Text(
                     '20',
                     style: TextStyle(fontSize: 10),
@@ -99,6 +104,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 badges.Badge(
+                  showBadge: showBadge,
                   badgeContent: const Text(
                     '3',
                     style: TextStyle(
@@ -122,6 +128,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 badges.Badge(
+                  showBadge: showBadge,
                   badgeContent: const Text(
                     '7',
                     style: TextStyle(
@@ -144,6 +151,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 badges.Badge(
+                  showBadge: showBadge,
                   badgeContent: const Text(
                     '4',
                     style: TextStyle(
@@ -166,6 +174,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 badges.Badge(
+                  showBadge: showBadge,
                   badgeContent: const Icon(
                     Icons.check,
                     size: 15,
@@ -187,6 +196,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 badges.Badge(
+                  showBadge: showBadge,
                   badgeContent: const Icon(
                     Icons.check,
                     size: 15,
@@ -204,6 +214,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 badges.Badge(
+                  showBadge: showBadge,
                   badgeContent: const Icon(
                     Icons.check,
                     size: 15,
@@ -222,6 +233,28 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
+            const SizedBox(height: 20),
+            InkWell(
+              onTap: () {
+                setState(() {
+                  showBadge = !showBadge;
+                });
+              },
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text('Show badges '),
+                  Switch(
+                    value: showBadge,
+                    onChanged: (newValue) {
+                      setState(() {
+                        showBadge = newValue;
+                      });
+                    },
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
