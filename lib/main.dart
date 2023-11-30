@@ -151,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.white,
                     ),
                   ),
-                  position: badges.BadgePosition.bottomEnd (bottom: 10, end: 0),
+                  position: badges.BadgePosition.bottomEnd(bottom: 10, end: 0),
                   badgeAnimation: const badges.BadgeAnimation.size(
                     animationDuration: Duration(seconds: 1),
                     loopAnimation: true,
@@ -166,8 +166,12 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 badges.Badge(
-                  badgeContent: const Icon(Icons.check, size: 15, color: Colors.white,),
-                  position: badges.BadgePosition.topEnd (top: -10, end: 0),
+                  badgeContent: const Icon(
+                    Icons.check,
+                    size: 15,
+                    color: Colors.white,
+                  ),
+                  position: badges.BadgePosition.topEnd(top: -10, end: 0),
                   badgeAnimation: const badges.BadgeAnimation.scale(
                     animationDuration: Duration(seconds: 2),
                     loopAnimation: true,
@@ -183,8 +187,12 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 badges.Badge(
-                  badgeContent: const Icon(Icons.check, size: 15, color: Colors.white,),
-                  position: badges.BadgePosition.topEnd (top: -10, end: 0),
+                  badgeContent: const Icon(
+                    Icons.check,
+                    size: 15,
+                    color: Colors.white,
+                  ),
+                  position: badges.BadgePosition.topEnd(top: -10, end: 0),
                   badgeStyle: const badges.BadgeStyle(
                     badgeColor: Colors.blue,
                     shape: badges.BadgeShape.instagram,
@@ -196,8 +204,12 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 badges.Badge(
-                  badgeContent: const Icon(Icons.check, size: 15, color: Colors.white,),
-                  position: badges.BadgePosition.topEnd (top: -10, end: 0),
+                  badgeContent: const Icon(
+                    Icons.check,
+                    size: 15,
+                    color: Colors.white,
+                  ),
+                  position: badges.BadgePosition.topEnd(top: -10, end: 0),
                   badgeStyle: const badges.BadgeStyle(
                     badgeColor: Colors.blue,
                     shape: badges.BadgeShape.twitter,
